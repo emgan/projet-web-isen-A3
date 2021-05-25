@@ -4,9 +4,122 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="./lumiere.css">
 	<title>Document</title>
 </head>
 <body>
-	<h1></h1>
+	<h1 class="title">Menu Principal</h1>
+	<div class="temperature">
+		<button><a href="./temperature.html">Temperature</a></button>
+	</div>
+	<div class = "lumiere">
+		<button> <a href="#">Lumières</a></button>
+	</div>
+	<div class = "tdb">
+		<button> <a href="./tableau_de_bord.php">Tableau de Bord</a></button>
+	</div>
+	<div>
+		<fieldset>
+			<legend>Lumières</legend>
+			<center>
+				<p><U>Gestionnaire de la lumiere</U></p>
+			</center>
+			<form action="http://etu132.projets.isen-ouest.fr/lumiere.html" method="post">
+				<table border="1">
+					<tbody>
+						<tr class= "separation">
+							<td colspan="8"></td>
+						</tr>
+						<tr>
+							<td>choix capteur</td>
+							<td>:</td>
+							<td>
+								<select name="choix_capteur">
+									<option value="lum1" class="lum1">lum1</option>
+									<option value="lum2" class="lum2">lum2</option>
+									<option value="lum3" class="lum3">lum3</option>
+								</select>
+							</td>
+							<td>Choisir une valeur</td>
+							<td>:</td>
+							<td>
+								<label for="range_lum">
+									<input type="range" name="range_lum" value="50">
+								</label>
+							</td>
+							<td rowspan="4" ><img src="./images/clignotant.gif" alt="alarme"></td>
+							<td rowspan="2">
+								<label for="soumettre">
+									<input type="submit" name="soumettre" value="Soumettre">
+								</label>
+							</td>
+						</tr>
+						<tr>
+
+							<td>Maison</td>
+							<td>:</td>
+							<td>
+								<label for="code_maison">
+									<input type="radio" name="code_maison" value="A">
+									A
+									<input type="radio" name="code_maison" value="B">
+									B
+									<input type="radio" name="code_maison" value="C">
+									C
+									<input type="radio" name="code_maison" value="D">
+									D
+								</label>
+							</td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Mode d'Activation</td>
+							<td>:</td>
+							<td>
+								<label for="on_off">
+									<input type="checkbox" name="on_off"> ON
+								</label>
+							</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td rowspan="2">
+								<label for="reset">
+									<input type="reset" name="reset">
+								</label>
+							</td>
+						</tr>
+						<tr>
+
+							<td>Mot de passe</td>
+							<td>:</td>
+							<td>
+								<label for="password">
+									<input type="password" name="password" maxlength="4" required>
+								</label>
+							</td>
+							<td></td>
+							<td></td>
+							<td></td>
+
+						</tr>
+
+						<tr class = "separation">
+							<td colspan="8"></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td colspan="6" class="conseil">*: 4 chiffres numérique au maximum</td>
+							<td><a href="https://yncrea.fr/" class="conseil">© Yncréa Ouest (29200)</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+			<a href="https://www.isen.fr/" class="logo"><img src="./images/logo_isen.jpg" alt="logo isen"></a>
+		</fieldset>
+	</div>
+
 </body>
 </html>
