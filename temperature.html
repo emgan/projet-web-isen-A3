@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+	<h1>Menu Principal</h1>
+	<div>
+		<button> <a href="#">Temperature</a></button>
+	</div>
+	<div>
+		<button> <a href="./lumiere.html">Lumières</a></button>
+	</div>
+	<div>
+		<button> <a href="./tableau_de_bord.php">Tableau de Bord</a></button>
+	</div>
+	<div>
+		<fieldset>
+			<legend>Temperature</legend>
+			<center>
+				<p><U>gestionnaire de la temperature</U></p>
+			</center>
+			<form action="http://etu132.projets.isen-ouest.fr/temperature.html" method="get">
+				<table border= 1px >
+					<tbody border= 1px>
+						<tr>
+							<td rowspan="6"><img src="./images/temp_gif.gif" alt="temperature"></td>
+							<td>choix capteur</td>
+							<td>:</td>
+							<td>
+								<select name="choix_capteur">
+									<option value="temp1">temp1</option>
+									<option value="temp2">temp2</option>
+									<option value="temp3">temp3</option>
+								</select>
+							</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td rowspan="6"><img src="./images/capteur_temp.png" alt="capteur temperature"></td>
+						</tr>
+						<tr>
+
+							<td>Valeur minimale</td>
+							<td>:</td>
+							<td>
+								<label for="val_min">
+									<input type="text" placeholder="min" name="val_min">
+								</label>
+							</td>
+							<td>Valeur max</td>
+							<td>:</td>
+							<td>
+								<label for="val_max">
+									<input type="text" placeholder="max" name="val_max">
+								</label>
+							</td>
+
+						</tr>
+						<tr>
+							<label for="unite">
+								<td>Unité</td>
+								<td>:</td>
+								<td>
+									<input type="radio" name="unite" value="celsius">
+									°C
+								</td>
+								<td>ou</td>
+								<td>
+									<input type="radio" name="unite" value="fahrenheit">
+									°F
+								</td>
+								<td></td>
+							</label>
+						</tr>
+						<tr>
+
+							<td>Activation</td>
+							<td>:</td>
+							<td>
+								<label for="on_off">
+									<input type="checkbox" name="on_off">
+									ON
+								</label>
+							</td>
+							<td></td>
+							<td></td>
+							<td></td>
+
+						</tr>
+						<tr>
+
+							<td>Mot de passe *</td>
+							<td>:</td>
+							<td>
+								<label for="password">
+									<input type="password" name="password" maxlength="4" required>
+								</label>
+							</td>
+							<td></td>
+							<td></td>
+							<td></td>
+
+						</tr>
+						<tr>
+							<label for="soumettre">
+								<td>Envoyer / Efface les données</td>
+								<td>:</td>
+								<td colspan="2">
+									<input type="submit" name="soumettre" value="soumettre">
+								</td>
+								<td colspan="2">
+									<input type="reset" name="soumettre">
+								</td>
+							</label>
+						</tr>
+						<tr>
+
+						</tr>
+						<tr>
+							<td></td>
+							<td colspan="6">*: 4 chiffres numérique au maximum</td>
+							<td><a href="https://yncrea.fr/">© Yncréa Ouest (29200)</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+			<a href="https://www.isen.fr/"><img src="./images/logo_isen.jpg" alt="logo isen"></a>
+		</fieldset>
+	</div>
+
+</body>
+</html>
