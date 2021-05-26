@@ -1,7 +1,7 @@
 body{
   margin: 0;
   padding: 0;
-  background: url("./images/background.png") no-repeat 50% 50%/cover;
+  background: url("./images/background.png") no-repeat 100%/cover;
   width: 100%;
   /*overflow: hidden;*/
 }
@@ -87,9 +87,10 @@ a:visited{
 /********************************** FIELDSET & FORM *****************************/
 
 fieldset{
-  background: #ffcccc;
+  background: #fdeeee;
   opacity: 0.8;
   border: solid 2px #808080;
+  height: 480px;
 }
 
 legend{
@@ -102,52 +103,122 @@ legend span{
   font-size: 0.9rem;
 }
 
+
 table td{
   padding: 10px;
-  margin: 0 15px;
+  margin: 2px 0;
+  padding-right: 4px;
   font-weight: bold;
   color: #000000;
   opacity: 1;
 }
 
-.temperatureP{
+.temperatureP, .lumiereTable p{
   font-size: 1.5rem;
-  color: #000000;
+  color: #ffffff;
   font-weight: bold;
   text-transform: uppercase;
   position: relative;
   top: 50%;
   left: 50%;
   transform: translateX(-50%);
-  background: #229b22;
   border-radius: 30px 30px 0 0;
-  width: 45%;
+  border-spacing:10px;
+  width: 41.9%;
   margin-bottom: 0;
   padding-bottom: 0;
   text-align: center;
 }
 
-.temperatureTable{
+.temperatureP{
+    background: #229b22;
+}
+
+.lumiereTable p{
+  background: #ff0000;
+}
+
+.temperatureTable, .lumiereTable table{
   margin-top: 0;
-  padding-tops: 0;
+  padding: 0;
   width: inherit;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+  border-radius: 0 0 30px 30px;
+  border-spacing: 15px;
+}
+
+.temperatureTable{
   background: #90ee90;
-  border-radius: 0 0 30px 30px
+}
+
+.lumiereTable table{
+  background: #ffcccc;
 }
 
 .capteurTemp img{
-  height: 200px;
+  height: 100px;
+}
+
+.capteurLum img{
+  height: 100px;
+}
+
+.capteurLum{
+  border-right: none !important;
 }
 
 .capteurTemp{
   border-right: none !important;
 }
 
+.lumiereTable td{
+  border-right: 4px dotted #000000;
+}
+
 .temperatureTable td{
-  border-right: dotted 4px #000000;
-  border-spacing: 5px;
-  border-h
+  border-right: 4px dotted #000000;
+  text-align: center;
+}
+
+/***************************** SLIDER ********************************/
+
+.secondRow{
+  width: 250px;
+  padding: 10px 32px;
+}
+
+progress {
+  /* ici les styles généraux */
+  -webkit-appearance: none;
+  width: 250px;
+}
+
+
+progress::-webkit-progress-bar {
+	/* ici les styles généraux pour Webkit */
+
+}
+progress::-webkit-progress-value {
+	/* styles de barre d'avancement pour Webkit */
+  background: #ff0000;
+}
+
+/***************************** FOOTER ******************************************/
+
+.logo img{
+  width: 150px;
+  padding: 0;
+  margin: 0;
+  border: dotted 2px #000000;
+}
+
+.logo{
+  width: inherit;
+  float: right;
+  position: relative;
+  left: 13px;
+  top: -41px;
+
 }

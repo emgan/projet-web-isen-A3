@@ -35,9 +35,15 @@
 							<td rowspan="2" class="capteurTemp"> <img src="./images/capteur_temp.png" alt="capteur temperature"> </td>
 						</tr>
 						<tr>
-							<td>10.25</td>
-							<td>11.32</td>
-							<td>20.45</td>
+							<td>
+								<?php echo file_get_contents ('./temp1.txt'); ?>
+							</td>
+							<td>
+								<?php echo file_get_contents ('./temp2.txt'); ?>
+							</td>
+							<td>
+								<?php echo file_get_contents ('./temp3.txt'); ?>
+							</td>
 						</tr>
 					</tbody>
 				</table>
@@ -48,16 +54,24 @@
 					<tbody>
 						<tr>
 							<td>Capteur 1 (lum 1)</td>
-							<td>20%</td>
-							<td rowspan="3"> <img src="./images/capteur_lum.png" alt="capteur lumière"> </td>
+							<td class="secondRow">
+								<progress max="100" value=<?php echo file_get_contents ('./lum1.txt'); ?>>
+									<?php echo file_get_contents ('./lum2.txt'); ?>#
+								</progress>
+							</td>
+							<td rowspan="3" class="capteurLum"> <img src="./images/capteur_lum.png" alt="capteur lumière"> </td>
 						</tr>
 						<tr>
 							<td>capteur 2 (lum 2)</td>
-							<td>40%</td>
+							<td class="secondRow">
+								<progress max="100" value=<?php echo file_get_contents ('./lum2.txt'); ?>></progress>
+							</td>
 						</tr>
 						<tr>
 							<td>capteur 3 (lum 3)</td>
-							<td>90%</td>
+							<td class="secondRow">
+								<progress max="100" value=<?php echo file_get_contents ('./lum3.txt'); ?>></progress>
+							</td>
 						</tr>
 					</tbody>
 				</table>
