@@ -36,7 +36,7 @@
 							<td>:</td>
 							<td>
 								<select name="choix_capteur">
-									<option value="temp1" class="temp1">temp1</option>
+									<option value="temp1" class="temp1" selected>temp1</option>
 									<option value="temp2" class="temp2">temp2</option>
 									<option value="temp3" class="temp3">temp3</option>
 								</select>
@@ -96,11 +96,14 @@
 						</tr>
 						<tr>
 
-							<td>Mot de passe *</td>
+							<td class="motDePasse">
+								Mot de passe
+								<span>*</span>
+							</td>
 							<td>:</td>
 							<td>
 								<label for="password">
-									<input type="password" name="password" maxlength="4" required>
+									<input type="password" name="password" pattern="[0-9]{4}" maxlength="4" required>
 								</label>
 							</td>
 							<td></td>

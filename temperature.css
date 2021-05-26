@@ -112,7 +112,6 @@ table{
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  border-spacing: none;
 
 }
 
@@ -122,6 +121,10 @@ table td{
   font-weight: bold;
   color: #000000;
   opacity: 1;
+}
+
+.motDePasse span{
+  color: #0000ff;
 }
 
 .separation td{
@@ -181,7 +184,6 @@ select .temp3{
 
 .soumettre input, .reset input{
   width: 96%;
-  padding: -15px 15px;
   border: solid 1px #000000;
   font-weight: bold;
 }

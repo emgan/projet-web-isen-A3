@@ -21,9 +21,7 @@
 	<div>
 		<fieldset>
 			<legend>Lumières</legend>
-			<center>
 				<p><U>Gestionnaire de la lumiere</U></p>
-			</center>
 			<form action="http://etu132.projets.isen-ouest.fr/lumiere.html" method="post">
 				<table>
 					<tbody>
@@ -35,7 +33,7 @@
 							<td>:</td>
 							<td>
 								<select name="choix_capteur">
-									<option value="lum1" class="lum1">lum1</option>
+									<option value="lum1" class="lum1" selected>lum1</option>
 									<option value="lum2" class="lum2">lum2</option>
 									<option value="lum3" class="lum3">lum3</option>
 								</select>
@@ -93,11 +91,14 @@
 						</tr>
 						<tr>
 
-							<td>Mot de passe</td>
+							<td class="motDePasse">
+								Mot de passe
+								<span>*</span>
+							</td>
 							<td>:</td>
 							<td>
 								<label for="password">
-									<input type="password" name="password" maxlength="4" required>
+									<input type="password" name="password" pattern="[0-9]{4}" maxlength="4" required>
 								</label>
 							</td>
 							<td></td>
