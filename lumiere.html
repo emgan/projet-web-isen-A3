@@ -25,7 +25,7 @@
 				<p><U>Gestionnaire de la lumiere</U></p>
 			</center>
 			<form action="http://etu132.projets.isen-ouest.fr/lumiere.html" method="post">
-				<table border="1">
+				<table>
 					<tbody>
 						<tr class= "separation">
 							<td colspan="8"></td>
@@ -47,9 +47,9 @@
 									<input type="range" name="range_lum" value="50">
 								</label>
 							</td>
-							<td rowspan="4" ><img src="./images/clignotant.gif" alt="alarme"></td>
+							<td rowspan="4" class = "clignotement"><img src="./images/clignotant.gif" alt="alarme"></td>
 							<td rowspan="2">
-								<label for="soumettre">
+								<label for="soumettre" class="soumettre">
 									<input type="submit" name="soumettre" value="Soumettre">
 								</label>
 							</td>
@@ -86,7 +86,7 @@
 							<td></td>
 							<td></td>
 							<td rowspan="2">
-								<label for="reset">
+								<label for="reset" class="reset">
 									<input type="reset" name="reset">
 								</label>
 							</td>
@@ -112,7 +112,7 @@
 						<tr>
 							<td></td>
 							<td colspan="6" class="conseil">*: 4 chiffres numérique au maximum</td>
-							<td><a href="https://yncrea.fr/" class="conseil">© Yncréa Ouest (29200)</a></td>
+							<td class="conseil"><a href="https://yncrea.fr/">© Yncréa Ouest (29200)</a></td>
 						</tr>
 					</tbody>
 				</table>

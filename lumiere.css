@@ -1,1 +1,212 @@
-/* TO DO  */
+body{
+  margin: 0;
+  padding: 0;
+  background: url("./images/background.png") no-repeat 50% 50%/cover;
+  width: 100%;
+  /*overflow: hidden;*/
+}
+
+a:visited{
+  color: #000000;
+}
+
+/*************************** HEADER ******************************************/
+
+.title{
+
+  position: relative;
+  left: 50%;
+  transform: translateX(-45%);
+  width: 30%;
+  padding-top: 20px;
+  font-size: 3rem;
+  color: #ff0000;
+  text-shadow: 4px 4px 6px #000000;
+}
+
+.temperature{
+  position: relative;
+  left: 50%;
+  transform: translateX(-45%);
+  width: 30%;
+  margin-bottom: 5px;
+}
+
+.temperature a{
+  padding: 0 118px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #000000;
+}
+
+.temperature button{
+  background: #e0e0e0;
+  border: solid 4px #000000;
+}
+
+.lumiere{
+  position: relative;
+  left: 50%;
+  transform: translateX(-45%);
+  width: 30%;
+  margin-bottom: 5px;
+}
+
+.lumiere a{
+  padding: 0 128px;
+  color: #808080;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.lumiere button{
+  background: #ffff99;
+  border: dotted 4px #ff0000;
+}
+
+.tdb{
+  position: relative;
+  left: 50%;
+  transform: translateX(-45%);
+  width: 30%;
+  margin-bottom: 5px;
+}
+
+.tdb a{
+  padding: 0 106px;
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.tdb button{
+  background: #e0e0e0;
+  border: solid 4px #000000;
+}
+
+/********************************** FIELDSET & FORM *****************************/
+
+fieldset{
+  background: #ffcccc;
+  opacity: 0.8;
+  border: solid 2px #808080;
+}
+
+legend{
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff0000;
+}
+
+fieldset p{
+  font-size: 1.5rem;
+  color: #ff0000;
+  font-weight: bold;
+  text-decoration: underline;
+  position: relative;
+  top: 5%;
+  margin-bottom: 25px;
+}
+
+table{
+  width: inherit;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border-spacing: none;
+
+}
+
+table td{
+  padding: 0;
+  margin: 0 15px;
+  font-weight: bold;
+  color: #000000;
+  opacity: 1;
+}
+
+.separation td{
+  width: 100%;
+  border-top: dashed 2px #000000;
+  border-bottom: dashed 2px #000000;
+}
+
+/***************************** TABLEAU **************************************/
+
+select{
+  background: transparent;
+  font-weight: bold;
+}
+select option{
+  background: #ffff00;
+}
+
+
+select .lum1{
+  color: #ff0000;
+  font-weight: bold;
+}
+
+select .lum2{
+  color: #00ff00;
+  font-weight: bold;
+}
+
+select .lum3{
+  color: #0000ff;
+  font-weight: bold;
+}
+
+.clignotement img{
+
+  height: 200px;
+}
+
+.soumettre input, .reset input{
+  width:200px;
+  padding: -15px 15px;
+  border: solid 1px #000000;
+  font-weight: bold;
+}
+
+.soumettre input{
+  background: #f49090;
+  position: absolute;
+  top: 35%;
+  margin-bottom: -100px;
+}
+
+.reset input{
+  background: #ffff99;
+  position: absolute;
+  top: 90%;
+  margin-top: -100px;
+}
+
+.conseil{
+  font-weight: bold;
+  width: 200px;
+  color: #ff0000;
+}
+
+.conseil a:visited{
+  color: #ff0000;
+}
+
+/************************************ FOOTER ***********************************/
+
+.logo img{
+  width: 150px;
+  padding: 0;
+  margin: 0;
+  border: dotted 2px #000000;
+}
+
+.logo{
+  width: inherit;
+  float: right;
+  position: relative;
+  left: 13px;
+  top: 14px;
+
+}
