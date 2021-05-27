@@ -184,13 +184,13 @@ table td{
 
 /***************************** SLIDER ********************************/
 
-.secondRow{
+ .secondRow{
   width: 250px;
   padding: 10px 32px;
 }
-
+/*
 progress {
-  /* ici les styles généraux */
+
   -webkit-appearance: none;
   width: 250px;
 }
@@ -210,6 +210,33 @@ progress::before{
 progress::-webkit-progress-value{
   background: #ff0000;
 }
+*/
+
+.progress-background{
+  position: relative;
+  width: 100% !important;
+  height: 25px !important;
+  background: #808080;
+
+  z-index: -9999;
+}
+
+.progress-bar{
+  position: relative;
+  height: 25px;
+  background: #ff0000;
+  z-index: -999;
+}
+
+.progress-bar span{
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+  text-align: center;
+}
+
+
 
 /***************************** FOOTER ******************************************/
 
@@ -225,6 +252,6 @@ progress::-webkit-progress-value{
   float: right;
   position: relative;
   left: 13px;
-  top: -41px;
+  top: -61px;
 
 }

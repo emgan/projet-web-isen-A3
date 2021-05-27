@@ -29,7 +29,7 @@ a:visited{
   left: 50%;
   transform: translateX(-45%);
   width: 30%;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .temperature a{
@@ -47,11 +47,11 @@ a:visited{
   left: 50%;
   transform: translateX(-45%);
   width: 30%;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .lumiere a{
-  padding: 0 128px;
+  padding: 0 130px;
   color: #808080;
   text-decoration: none;
   font-weight: bold;
@@ -65,7 +65,7 @@ a:visited{
   left: 50%;
   transform: translateX(-45%);
   width: 30%;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .tdb a{
