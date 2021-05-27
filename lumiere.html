@@ -11,13 +11,13 @@
 <body>
 	<h1 class="title">Menu Principal</h1>
 	<div class="temperature">
-		<button><a href="./temperature.html">Temperature</a></button>
+		<a href="./temperature.html">Temperature</a>
 	</div>
 	<div class = "lumiere">
-		<button> <a href="#">Lumières</a></button>
+		<a href="#">Lumières</a>
 	</div>
 	<div class = "tdb">
-		<button> <a href="./tableau_de_bord.php">Tableau de Bord</a></button>
+		<a href="./tableau_de_bord.php">Tableau de Bord</a>
 	</div>
 	<div>
 		<fieldset>
@@ -43,13 +43,13 @@
 							<td>:</td>
 							<td>
 								<label for="range_lum">
-									<input type="range" name="range_lum" value="50">
+									<input type="range" id="range_lum" name="range_lum" value="50">
 								</label>
 							</td>
 							<td rowspan="4" class = "clignotement"><img src="./images/clignotant.gif" alt="alarme"></td>
 							<td rowspan="2">
 								<label for="soumettre" class="soumettre">
-									<input type="submit" name="soumettre" value="Soumettre">
+									<input type="submit" id="soumettre" name="soumettre" value="Soumettre">
 								</label>
 							</td>
 						</tr>
@@ -58,14 +58,20 @@
 							<td>Maison</td>
 							<td>:</td>
 							<td>
-								<label for="code_maison">
-									<input type="radio" name="code_maison" value="A">
+								<label for="code_maison1">
+									<input type="radio" id="code_maison1" name="code_maison" value="A">
 									A
-									<input type="radio" name="code_maison" value="B">
+								</label>
+								<label for="code_maison2">
+									<input type="radio" id="code_maison2" name="code_maison" value="B">
 									B
-									<input type="radio" name="code_maison" value="C">
+								</label>
+								<label for="code_maison3">
+									<input type="radio" id="code_maison3" name="code_maison" value="C">
 									C
-									<input type="radio" name="code_maison" value="D">
+								</label>
+								<label for="code_maison4">
+									<input type="radio" id="code_maison4" name="code_maison" value="D">
 									D
 								</label>
 							</td>
@@ -78,7 +84,7 @@
 							<td>:</td>
 							<td>
 								<label for="on_off">
-									<input type="checkbox" name="on_off"> ON
+									<input type="checkbox" id="on_off" name="on_off"> ON
 								</label>
 							</td>
 							<td></td>
@@ -86,7 +92,7 @@
 							<td></td>
 							<td rowspan="2">
 								<label for="reset" class="reset">
-									<input type="reset" name="reset">
+									<input type="reset" id="reset" name="reset">
 								</label>
 							</td>
 						</tr>
@@ -99,7 +105,7 @@
 							<td>:</td>
 							<td>
 								<label for="password">
-									<input type="password" name="password" pattern="[0-9]{4}" maxlength="4" required>
+									<input type="password" id="password" name="password" pattern="[0-9]{4}" maxlength="4" required>
 								</label>
 							</td>
 							<td></td>

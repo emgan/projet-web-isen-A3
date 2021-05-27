@@ -55,8 +55,8 @@
 						<tr>
 							<td>Capteur 1 (lum 1)</td>
 							<td class="secondRow">
-								<progress max="100" value=<?php echo file_get_contents ('./lum1.txt'); ?>>
-									<?php echo file_get_contents ('./lum2.txt'); ?>#
+								<progress max="100" value=<?php echo file_get_contents ('./lum1.txt'); ?>
+																		data-label =<?php echo file_get_contents ('./lum1.txt'); ?>+"%">
 								</progress>
 							</td>
 							<td rowspan="3" class="capteurLum"> <img src="./images/capteur_lum.png" alt="capteur lumière"> </td>
@@ -64,13 +64,17 @@
 						<tr>
 							<td>capteur 2 (lum 2)</td>
 							<td class="secondRow">
-								<progress max="100" value=<?php echo file_get_contents ('./lum2.txt'); ?>></progress>
+								<progress max="100" value=<?php echo file_get_contents ('./lum2.txt'); ?>
+																		data-label =<?php echo file_get_contents ('./lum2.txt'); ?>+"%" >
+								</progress>
 							</td>
 						</tr>
 						<tr>
 							<td>capteur 3 (lum 3)</td>
 							<td class="secondRow">
-								<progress max="100" value=<?php echo file_get_contents ('./lum3.txt'); ?>></progress>
+								<progress max="100" value=<?php echo file_get_contents ('./lum3.txt'); ?>
+																		data-label =<?php echo file_get_contents ('./lum3.txt'); ?>+"%">
+								</progress>
 							</td>
 						</tr>
 					</tbody>

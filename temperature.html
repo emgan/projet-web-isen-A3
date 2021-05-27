@@ -11,20 +11,18 @@
 <body>
 	<h1 class="title">Menu Principal</h1>
 	<div class="temperature">
-		<button><a href="#">Temperature</a></button>
+		<a href="#">Temperature</a>
 	</div>
 	<div class = "lumiere">
-		<button> <a href="./lumiere.html">Lumières</a></button>
+		<a href="./lumiere.html">Lumières</a>
 	</div>
 	<div class = "tdb">
-		<button> <a href="./tableau_de_bord.php">Tableau de Bord</a></button>
+		<a href="./tableau_de_bord.php">Tableau de Bord</a>
 	</div>
 	<div>
 		<fieldset>
 			<legend>Température</legend>
-			<center>
-				<p><U>Gestionnaire de la température</U></p>
-			</center>
+				<p>Gestionnaire de la température</p>
 			<form action="http://etu132.projets.isen-ouest.fr/temperature.html" method="get">
 				<table>
 					<tbody>
@@ -53,32 +51,36 @@
 							<td>:</td>
 							<td>
 								<label for="val_min">
-									<input type="text" placeholder="min" name="val_min" class="min_max">
+									<input type="text" id="val_min" placeholder="min" name="val_min" class="min_max">
 								</label>
 							</td>
 							<td class="valMax">Valeur maximale</td>
 							<td>:</td>
 							<td>
 								<label for="val_max" >
-									<input type="text" placeholder="max" name="val_max" class="min_max" >
+									<input type="text" id="val_max" placeholder="max" name="val_max" class="min_max" >
 								</label>
 							</td>
 
 						</tr>
 						<tr>
-							<label for="unite">
+
 								<td>Unité</td>
 								<td>:</td>
 								<td>
-									<input type="radio" name="unite" value="celsius">
-									°C
+									<label for="unite1">
+										<input type="radio" id="unite1" name="unite" value="celsius">
+										°C
+									</label>
 								</td>
 								<td class = "ou">ou</td>
 								<td>
-									<input type="radio" name="unite" value="fahrenheit"> °F
+									<label for="unite2">
+										<input type="radio" id="unite2" name="unite" value="fahrenheit"> °F
+									</label>
 								</td>
 								<td></td>
-							</label>
+
 						</tr>
 						<tr>
 
@@ -86,7 +88,7 @@
 							<td>:</td>
 							<td>
 								<label for="on_off">
-									<input type="checkbox" name="on_off">
+									<input type="checkbox" id="on_off" name="on_off">
 									ON
 								</label>
 							</td>
@@ -104,7 +106,7 @@
 							<td>:</td>
 							<td>
 								<label for="password">
-									<input type="password" name="password" pattern="[0-9]{4}" maxlength="4" required>
+									<input type="password" id="password" name="password" pattern="[0-9]{4}" maxlength="4" required>
 								</label>
 							</td>
 							<td></td>
@@ -113,16 +115,20 @@
 
 						</tr>
 						<tr>
-							<label for="soumettre">
-								<td class="envoyer">Envoyer / Efface les données</td>
-								<td>:</td>
-								<td colspan="2" class="soumettre">
-									<input type="submit" name="soumettre" value="soumettre">
-								</td>
-								<td colspan="2" class="reset">
-									<input type="reset" name="soumettre">
-								</td>
-							</label>
+
+							<td class="envoyer">Envoyer / Efface les données</td>
+							<td>:</td>
+							<td colspan="2" class="soumettre">
+								<label for="soumettre1">
+									<input type="submit" id="soumettre1" name="soumettre" value="soumettre">
+								</label>
+							</td>
+							<td colspan="2" class="reset">
+								<label for="soumettre2">
+									<input type="reset" id="soumettre2" name="soumettre">
+								</label>
+							</td>
+
 						</tr>
 						<tr class = "separation">
 							<td colspan="8"></td>

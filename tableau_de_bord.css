@@ -195,13 +195,19 @@ progress {
   width: 250px;
 }
 
-
-progress::-webkit-progress-bar {
-	/* ici les styles généraux pour Webkit */
+progress::before{
+  content: attr(data-label);
+  font-size: 0.8em;
+  vertical-align: 0;
+  position: absolute;
+  width:inherit;
+  text-align: center;
+  font-weight: bold;
+  color: #000000;
 
 }
-progress::-webkit-progress-value {
-	/* styles de barre d'avancement pour Webkit */
+
+progress::-webkit-progress-value{
   background: #ff0000;
 }
 
