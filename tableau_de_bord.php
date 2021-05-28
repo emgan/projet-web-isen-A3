@@ -10,13 +10,13 @@
 <body>
 	<h1 class="title">Menu Principal</h1>
 	<div class="temperature">
-		<button><a href="./temperature.html">Temperature</a></button>
+		<a href="./temperature.html">Temperature</a>
 	</div>
 	<div class = "lumiere">
-		<button> <a href="./lumiere.html">Lumières</a></button>
+		<a href="./lumiere.html">Lumières</a>
 	</div>
 	<div class = "tdb">
-		<button> <a href="#">Tableau de Bord</a></button>
+		<a href="#">Tableau de Bord</a>
 	</div>
 	<div>
 		<fieldset>

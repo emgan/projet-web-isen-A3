@@ -17,8 +17,8 @@ a:visited{
 
   position: relative;
   left: 50%;
-  transform: translateX(-45%);
-  width: 30%;
+  transform: translateX(-50%);
+  width: fit-content;
   padding-top: 20px;
   font-size: 3rem;
   color: #0000ff;
@@ -28,8 +28,8 @@ a:visited{
 .temperature{
   position: relative;
   left: 50%;
-  transform: translateX(-45%);
-  width: 30%;
+  transform: translateX(-50%);
+  width: fit-content;
   margin-bottom: 10px;
 }
 
@@ -46,14 +46,15 @@ a:visited{
 .lumiere{
   position: relative;
   left: 50%;
-  transform: translateX(-45%);
-  width: 30%;
+  transform: translateX(-50%);
+  width: fit-content;
   margin-bottom: 10px;
 }
 
 .lumiere a{
-  padding: 0 132px;
+  padding: 0 130px;
   color: #000000;
+  font-weight: bold;
   text-decoration: none;
   background: #e0e0e0;
   border: solid 4px #000000;
@@ -63,14 +64,15 @@ a:visited{
 .tdb{
   position: relative;
   left: 50%;
-  transform: translateX(-45%);
-  width: 30%;
+  transform: translateX(-50%);
+  width: fit-content;
   margin-bottom: 10px;
 }
 
 .tdb a{
-  padding: 0 110px;
+  padding: 0 106px;
   color: #000000;
+  font-weight: bold;
   text-decoration: none;
   background: #e0e0e0;
   border: solid 4px #000000;
@@ -99,6 +101,7 @@ fieldset p{
   position: relative;
   top: 5%;
   margin-bottom: 25px;
+  text-align: center !important;
 }
 
 table{

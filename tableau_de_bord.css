@@ -16,8 +16,8 @@ a:visited{
 
   position: relative;
   left: 50%;
-  transform: translateX(-45%);
-  width: 30%;
+  transform: translateX(-50%);
+  width: fit-content;
   padding-top: 20px;
   font-size: 3rem;
   color: #00ff00;
@@ -27,62 +27,56 @@ a:visited{
 .temperature{
   position: relative;
   left: 50%;
-  transform: translateX(-45%);
-  width: 30%;
-  margin-bottom: 5px;
+  transform: translateX(-50%);
+  width: fit-content;
+  margin-bottom: 10px;
 }
 
 .temperature a{
-  padding: 0 118px;
+  padding: 0 120px;
   text-decoration: none;
   font-weight: bold;
   color: #000000;
-}
-
-.temperature button{
   background: #e0e0e0;
   border: solid 4px #000000;
 }
+
 
 .lumiere{
   position: relative;
   left: 50%;
-  transform: translateX(-45%);
-  width: 30%;
-  margin-bottom: 5px;
+  transform: translateX(-50%);
+  width: fit-content;
+  margin-bottom: 10px;
 }
 
 .lumiere a{
-  padding: 0 128px;
+  padding: 0 132px;
   color: #000000;
   text-decoration: none;
   font-weight: bold;
-}
-
-.lumiere button{
   background: #e0e0e0;
   border: solid 4px #000000;
 }
 
+
 .tdb{
   position: relative;
   left: 50%;
-  transform: translateX(-45%);
-  width: 30%;
-  margin-bottom: 5px;
+  transform: translateX(-50%);
+  width: fit-content;
+  margin-bottom: 10px;
 }
 
 .tdb a{
-  padding: 0 106px;
+  padding: 0 108px;
   color: #808080;
   text-decoration: none;
   font-weight: bold;
-}
-
-.tdb button{
   background: #ffff99;
   border: dotted 4px #00ff00;
 }
+
 
 /********************************** FIELDSET & FORM *****************************/
 
