@@ -73,163 +73,36 @@ void commande_objet(char code_maison, int numero_objet, bool etat){
 */
 
 void traiter_parametres(struct s_parametres* param){
-	// TODO
-	if(param->frm_type==1){ //si on a un formulaire GET
-		if (param->password == 1234) { //on regarde que le password est bon
-			if (param->on_off == 1) { //si le capteur temperature est activé
-				if (strcmp(param->choix_capteur,"temp1") == 0) { //si le capteur est temp1
-					float newVal = generer_valeur_aleatoire(param->val_min, param->val_max); //on génére un nombre aléatoire entre val_min et val_max
-					float rounded = roundf(newVal*100)/100;
-					FILE* pf=NULL; //on initialise l'ouverture de fichier
-					pf=fopen("../temp1.txt","w"); //on ouvre le fichier temp
-					if (pf == NULL) {
-						printf("erreur\n"); //s'il n'y a pas de fichier erreur
-					}
-					else{
-						printf("%.2f\n",rounded );
-						fprintf(pf,"%.2f",rounded ); //sinon on écrit la valeur dans le fichier
-					}
-					fclose(pf);
-				}
-				else if(strcmp(param->choix_capteur,"temp2") == 0){ //si le capteur est temp2
-					float newVal = generer_valeur_aleatoire(param->val_min, param->val_max); //on génére un nombre aléatoire entre val_min et val_max
-					float rounded = roundf(newVal*100)/100; //nouvelle valeur arrondi à 2 décimales
-					FILE* pf=NULL; //on initialise l'ouverture de fichier
-					pf=fopen("../temp2.txt","w"); //on ouvre le fichier temp
-					if (pf == NULL) {
-						printf("erreur\n"); //s'il n'y a pas de fichier erreur
-					}
-					else{
-						printf("%f\n",rounded );
-						fprintf(pf,"%.2f",rounded ); //sinon on écrit la valeur dans le fichier
-					}
-					fclose(pf); // on ferme le
-				}
-				else{ //sinon le capteur choisi est temp3
-					float newVal = generer_valeur_aleatoire(param->val_min, param->val_max); //on génére un nombre aléatoire entre val_min et val_max
-					float rounded = roundf(newVal*100)/100;
-					FILE* pf=NULL; //on initialise l'ouverture de fichier
-					pf=fopen("../temp3.txt","w"); //on ouvre le fichier temp
-					if (pf == NULL) {
-						printf("erreur\n"); //s'il n'y a pas de fichier erreur
-					}
-					else{
-						printf("%f\n",rounded );
-						fprintf(pf,"%.2f",rounded ); //sinon on écrit la valeur dans le fichier
-					}
-					fclose(pf);
-				}
-			}
-			else{
-				if (strcmp(param->choix_capteur,"temp1") == 0){
-					FILE* pf=NULL; //on initialise l'ouverture de fichier
-					pf=fopen("../temp1.txt","w"); //on ouvre le fichier temp
-					if (pf == NULL) {
-						printf("erreur\n"); //s'il n'y a pas de fichier erreur
-					}
-					else{
-						fprintf(pf,"INACTIF"); //sinon on écrit la valeur dans le fichier
-					}
-					fclose(pf);
-				}
-				else if(strcmp(param->choix_capteur,"temp2") == 0){
-					FILE* pf=NULL; //on initialise l'ouverture de fichier
-					pf=fopen("../temp2.txt","w"); //on ouvre le fichier temp
-					if (pf == NULL) {
-						printf("erreur\n"); //s'il n'y a pas de fichier erreur
-					}
-					else{
-						fprintf(pf,"INACTIF"); //sinon on écrit la valeur dans le fichier
-					}
-					fclose(pf);
-				}
-				else{
-					FILE* pf=NULL; //on initialise l'ouverture de fichier
-					pf=fopen("../temp3.txt","w"); //on ouvre le fichier temp
-					if (pf == NULL) {
-						printf("erreur\n"); //s'il n'y a pas de fichier erreur
-					}
-					else{
-						fprintf(pf,"INACTIF"); //sinon on écrit la valeur dans le fichier
-					}
-					fclose(pf);
-				}
-			}
-		}
+	// // TODO
+	char* filename = (char*)malloc(40);
+	FILE* pf = NULL;
+	strcpy(filename, "../");
+	strcat(filename, param->choix_capteur);
+	strcat(filename, ".txt"); //on a notre chemin d'accès au fichier
+	if(param->password != PASSWORD){
+		printf("Votre mot de passe n'est pas le bon\n");
 	}
-	else{ //Sinon on a un formulaire POST
-		if (param->password == 1234) { //on regarde que le password est bon
-			if (param->on_off == 1) { //si le capteur temperature est activé
-				if (strcmp(param->choix_capteur,"lum1") == 0) { //si le capteur est temp1
-					FILE* pf=NULL; //on initialise l'ouverture de fichier
-					pf=fopen("../lum1.txt","w"); //on ouvre le fichier temp
-					if (pf == NULL) {
-						printf("erreur\n"); //s'il n'y a pas de fichier erreur
-					}
-					else{
-						fprintf(pf,"%d",param->range_lum ); //sinon on écrit la valeur dans le fichier
-					}
-					fclose(pf);
-				}
-				else if(strcmp(param->choix_capteur,"lum2") == 0){ //si le capteur est temp2
-					FILE* pf=NULL; //on initialise l'ouverture de fichier
-					pf=fopen("../lum2.txt","w"); //on ouvre le fichier temp
-					if (pf == NULL) {
-						printf("erreur\n"); //s'il n'y a pas de fichier erreur
-					}
-					else{
-						fprintf(pf,"%d",param->range_lum ); //sinon on écrit la valeur dans le fichier
-					}
-					fclose(pf);
-				}
-				else{ //sinon le capteur choisi est temp3
-					FILE* pf=NULL; //on initialise l'ouverture de fichier
-					pf=fopen("../lum3.txt","w"); //on ouvre le fichier temp
-					if (pf == NULL) {
-						printf("erreur\n"); //s'il n'y a pas de fichier erreur
-					}
-					else{
-						fprintf(pf,"%d",param->range_lum ); //sinon on écrit la valeur dans le fichier
-					}
-					fclose(pf);
-				}
-			}
-			else{
-				if (strcmp(param->choix_capteur,"lum1") == 0){
-					FILE* pf=NULL; //on initialise l'ouverture de fichier
-					pf=fopen("../lum1.txt","w"); //on ouvre le fichier temp
-					if (pf == NULL) {
-						printf("erreur\n"); //s'il n'y a pas de fichier erreur
-					}
-					else{
-						fprintf(pf,"INACTIF"); //sinon on écrit la valeur dans le fichier
-					}
-					fclose(pf);
-				}
-				else if(strcmp(param->choix_capteur,"lump2") == 0){
-					FILE* pf=NULL; //on initialise l'ouverture de fichier
-					pf=fopen("../lum2.txt","w"); //on ouvre le fichier temp
-					if (pf == NULL) {
-						printf("erreur\n"); //s'il n'y a pas de fichier erreur
-					}
-					else{
-						fprintf(pf,"INACTIF"); //sinon on écrit la valeur dans le fichier
-					}
-					fclose(pf);
-				}
-				else{
-					FILE* pf=NULL; //on initialise l'ouverture de fichier
-					pf=fopen("../lum3.txt","w"); //on ouvre le fichier temp
-					if (pf == NULL) {
-						printf("erreur\n"); //s'il n'y a pas de fichier erreur
-					}
-					else{
-						fprintf(pf,"INACTIF"); //sinon on écrit la valeur dans le fichier
-					}
-					fclose(pf);
-				}
-			}
+	else{
+		pf = fopen(filename, "w");
+		printf("%s\n",filename );
+		if (pf == NULL) {
+			printf("erreur\n"); //s'il n'y a pas de fichier erreur
 		}
-
+		if (param->frm_type == 1 && param->on_off == 1) {
+			float newVal = generer_valeur_aleatoire(param->val_min, param->val_max); //on génére un nombre aléatoire entre val_min et val_max
+			float rounded = roundf(newVal*100)/100;
+			fprintf(pf,"%.2f",rounded ); //sinon on écrit la valeur dans le fichier
+		}
+		else if (param->frm_type == 1 && param->on_off == 0) {
+				fprintf(pf,"INACTIF"); //sinon on écrit la valeur dans le fichier
+		}
+		else if(param->frm_type == 2 && param->on_off == 1){
+			fprintf(pf,"%d",param->range_lum ); //sinon on écrit la valeur dans le fichier
+		}
+		else if(param->frm_type ==2 && param->on_off == 0){
+			fprintf(pf,"INACTIF"); //sinon on écrit la valeur dans le fichier
+		}
+		fclose(pf);
 	}
+	free(filename);
 }
