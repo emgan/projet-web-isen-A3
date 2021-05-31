@@ -73,7 +73,7 @@ void commande_objet(char code_maison, int numero_objet, bool etat){
 */
 
 void traiter_parametres(struct s_parametres* param){
-	// // TODO
+	// DONE
 	char* filename = (char*)malloc(40);
 	FILE* pf = NULL;
 	strcpy(filename, "../");
@@ -88,18 +88,18 @@ void traiter_parametres(struct s_parametres* param){
 		if (pf == NULL) {
 			printf("erreur\n"); //s'il n'y a pas de fichier erreur
 		}
-		if (param->frm_type == 1 && param->on_off == 1) {
+		if (param->frm_type == FRM_GET && param->on_off == 1) {
 			float newVal = generer_valeur_aleatoire(param->val_min, param->val_max); //on génére un nombre aléatoire entre val_min et val_max
 			float rounded = roundf(newVal*100)/100;
 			fprintf(pf,"%.2f",rounded ); //sinon on écrit la valeur dans le fichier
 		}
-		else if (param->frm_type == 1 && param->on_off == 0) {
+		else if (param->frm_type == FRM_GET && param->on_off == 0) {
 				fprintf(pf,"INACTIF"); //sinon on écrit la valeur dans le fichier
 		}
-		else if(param->frm_type == 2 && param->on_off == 1){
-			fprintf(pf,"%d",param->range_lum ); //sinon on écrit la valeur dans le fichier
+		else if(param->frm_type == FRM_POST && param->on_off == 1){
+			fprintf(pf,"%d%%",param->range_lum ); //sinon on écrit la valeur dans le fichier
 		}
-		else if(param->frm_type ==2 && param->on_off == 0){
+		else if(param->frm_type == FRM_POST && param->on_off == 0){
 			fprintf(pf,"INACTIF"); //sinon on écrit la valeur dans le fichier
 		}
 		fclose(pf);

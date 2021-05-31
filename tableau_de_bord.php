@@ -56,8 +56,8 @@
 							<td>Capteur 1 (lum 1)</td>
 							<td class="secondRow">
 								<div class="progress-background">
-									<div class="progress-bar" style="width: <?php echo file_get_contents ('./lum1.txt');?>%;">
-										<span><?php echo file_get_contents ('./lum1.txt'); ?> %</span>
+									<div class="progress-bar" style="width: <?php echo file_get_contents ('./lum1.txt');?>;">
+										<span><?php echo file_get_contents ('./lum1.txt'); ?> </span>
 									</div>
 								</div>
 
@@ -71,8 +71,8 @@
 							<td>capteur 2 (lum 2)</td>
 							<td class="secondRow">
 								<div class="progress-background">
-									<div class="progress-bar" style="width: <?php echo file_get_contents ('./lum2.txt');?>%;">
-										<span><?php echo file_get_contents ('./lum2.txt'); ?> %</span>
+									<div class="progress-bar" style="width: <?php echo file_get_contents ('./lum2.txt');?>;">
+										<span><?php echo file_get_contents ('./lum2.txt'); ?></span>
 									</div>
 								</div>
 
@@ -85,8 +85,8 @@
 							<td>capteur 3 (lum 3)</td>
 							<td class="secondRow">
 								<div class="progress-background">
-									<div class="progress-bar" style="width: <?php echo file_get_contents ('./lum3.txt');?>%;">
-										<span><?php echo file_get_contents ('./lum3.txt'); ?> %</span>
+									<div class="progress-bar" style="width: <?php echo file_get_contents ('./lum3.txt');?>;">
+										<span><?php echo file_get_contents ('./lum3.txt'); ?></span>
 									</div>
 								</div>
 

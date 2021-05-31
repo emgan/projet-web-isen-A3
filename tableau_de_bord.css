@@ -219,15 +219,13 @@ progress::-webkit-progress-value{
   position: relative;
   height: 25px;
   background: #ff0000;
+  text-align: center;
   z-index: -999;
 }
 
 .progress-bar span{
   position: relative;
-  left: 50%;
-  transform: translateX(-50%);
   font-weight: bold;
-  text-align: center;
 }
 
 
